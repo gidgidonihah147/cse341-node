@@ -19,6 +19,8 @@
   },
   "homepage": "https://github.com/gidgidonihah147/cse341-node#readme",
   "dependencies": {
-    "express": "^4.18.1"
+    "dotenv": "^16.0.2",
+    "express": "^4.18.1",
+    "mongoose": "^6.6.0"
   }
 }
