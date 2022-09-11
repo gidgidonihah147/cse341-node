@@ -5,7 +5,7 @@ require('dotenv').config();
 const app = express()
 const port = 3000
 
-const uri = "mongodb+srv://Gidgidonihah:Kincaid147@cluster0.miea0ni.mongodb.net/?retryWrites=true&w=majority";
+const uri = "mongodb+srv://${DB_USER}:${DB_PASS}@cluster0.miea0ni.mongodb.net/?retryWrites=true&w=majority";
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
 
 client.connect(err => {
