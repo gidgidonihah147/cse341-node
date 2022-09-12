@@ -1,15 +1,11 @@
 const { MongoClient, ServerApiVersion } = require('mongodb');
 require("dotenv").config();
 
-const uri = process.env.MONGODB_URI;
-
+//const uri = process.env.MONGODB_URI;
+const uri = 'mongodb+srv://Gidgidonihah:Kincaid147@cluster0.miea0ni.mongodb.net/contacts';
 let _db;
 
 const initDb = (callback) => {
-  if (_db) {
-    console.log('Db is already initialized!');
-    return callback(null, _db);
-  }
   MongoClient.connect(uri)
     .then((client) => {
       _db = client;
