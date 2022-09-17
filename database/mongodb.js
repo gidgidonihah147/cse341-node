@@ -1,4 +1,5 @@
 const dotenv = require('dotenv');
+const { mongo } = require('mongoose');
 dotenv.config();
 const MongoClient = require('mongodb').MongoClient;
 
@@ -20,9 +21,6 @@ const initDb = (callback) => {
 };
 
 const getDb = () => {
-  if (!_db) {
-    throw Error('Db not initialized');
-  }
   return _db;
 };
 
