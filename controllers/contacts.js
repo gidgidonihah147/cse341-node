@@ -7,7 +7,7 @@ const ObjectId = require('mongodb').ObjectId;
 const getContacts = async (req, res, next) => {
   mongodb.initDb;
   //pull all documents from the listed database as there is nothing in the find perimeters
-  const result = await mongodb.getDb().db().collection('contacts').find();
+  const result = setTimeout(mongodb.getDb().db().collection('contacts').find(), 3000);
   //Display the results of the search in an array so its readable in chrome
   result.toArray().then((lists) => {
     res.setHeader('Content-Type', 'application/json');
