@@ -8,6 +8,7 @@ app.use('/',require('./routes'))
 
 mongodb.initDb((err, mongodb) => {
       app.listen(port);
+      console.log(`Error: ${err}`);
       console.log(`Connected to Mongo DB and available on port:${port}`);
       console.log(mongodb);
   });
