@@ -6,6 +6,10 @@ const uri = process.env.MONGODB_URI;
 let _db;
 
 const initDb = (callback) => {
+  if (_db) {
+    console.log('Database is already running!');
+    return callback(null, _db);
+  }
   MongoClient.connect(uri)
     .then((client) => {
       _db = client;
