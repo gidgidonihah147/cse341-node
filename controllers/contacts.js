@@ -17,7 +17,7 @@ const getContacts = async (req, res, next) => {
 
 const getContact = async (req, res, next) => {
   const dbId = new ObjectId(req.params.id);
-  const result = await mongodb.getDb().db().collection('contacts').find({ _id: dbId});
+  const result = setTimeout(mongodb.getDb().db().collection('contacts').find({ _id: dbId}), 3000);
   result.toArray().then((lists) => {
     res.setHeader('Content-Type', 'application/json');
     res.status(200).json(lists[0]);
