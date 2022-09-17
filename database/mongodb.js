@@ -1,12 +1,12 @@
 const { MongoClient, ServerApiVersion } = require('mongodb');
 require("dotenv").config();
 
-//const uri = process.env.MONGODB_URI;
+const uri = process.env.MONGODB_URI;
 
 let _db;
 
 const initDb = (callback) => {
-  MongoClient.connect(process.env.MONGODB_URI)
+  MongoClient.connect(uri)
     .then((client) => {
       _db = client;
       callback(null, _db);
@@ -18,7 +18,7 @@ const initDb = (callback) => {
 
 const getDb = () => {
   if (!_db) {
-    throw Error('Db not initialized');
+    throw Error('Database did not start');
   }
   return _db;
 };

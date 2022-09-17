@@ -14,7 +14,7 @@ GET http://localhost:3000/contacts/631e51174178157c493561b1 HTTP/1.1
 GET https://tparker-cse341.onrender.com/ HTTP/1.1
 
 ###
-GET https://tparker-cse341.onrender.com/contacts HTTP/1.1
+GET https://tparker-cse341.onrender.com/contacts/ HTTP/1.1
 
 ###
-GET https://tparker-cse341.onrender.com/contacts/631e51174178157c493561b1 HTTP/1.1
+GET https://tparker-cse341.onrender.com/contacts/631e51174178157c493561b1/ HTTP/1.1
