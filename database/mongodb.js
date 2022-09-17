@@ -1,16 +1,12 @@
-const dotenv = require('dotenv');
-const { mongo } = require('mongoose');
-dotenv.config();
-const MongoClient = require('mongodb').MongoClient;
+const { MongoClient, ServerApiVersion } = require('mongodb');
+require("dotenv").config();
+
+const uri = process.env.MONGODB_URI;
 
 let _db;
 
 const initDb = (callback) => {
-  if (_db) {
-    console.log('Db is already initialized!');
-    return callback(null, _db);
-  }
-  MongoClient.connect(process.env.MONGODB_URI)
+  MongoClient.connect(uri)
     .then((client) => {
       _db = client;
       callback(null, _db);
@@ -21,6 +17,9 @@ const initDb = (callback) => {
 };
 
 const getDb = () => {
+  if (!_db) {
+    throw Error('Db not initialized');
+  }
   return _db;
 };
 
