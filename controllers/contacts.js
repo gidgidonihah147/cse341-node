@@ -1,9 +1,11 @@
 //Pull the DB connection from the database file
+const { mongo } = require('mongoose');
 const mongodb = require('../database/mongodb');
-//Pull in the object id from the URL for the getSingle search
+//Pull in the object id from the URL for the getContact search
 const ObjectId = require('mongodb').ObjectId;
 
 const getContacts = async (req, res, next) => {
+  mongodb.initDb;
   //pull all documents from the listed database as there is nothing in the find perimeters
   const result = await mongodb.getDb().db().collection('contacts').find();
   //Display the results of the search in an array so its readable in chrome
