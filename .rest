@@ -18,3 +18,33 @@ GET https://tparker-cse341.onrender.com/contacts/ HTTP/1.1
 
 ###
 GET https://tparker-cse341.onrender.com/contacts/631e51174178157c493561b1/ HTTP/1.1
+
+
+###
+POST  http://localhost:3000/contacts/ HTTP/1.1
+Content-Type: application/json
+
+{
+    "firstName": "Tristin",
+    "lastName": "Parker",
+    "email": "Gidgidonihah@byui.edu",
+    "favoriteColor": "Orange",
+    "birthday": "07/25/1995"
+}
+
+###
+PUT  http://localhost:3000/contacts/632d1c198349a3c236d8df0c HTTP/1.1
+
+{
+    "_id": "632d1c198349a3c236d8df0c",
+    "firstName": "Tristin",
+    "lastName": "Parker",
+    "email": "Gidgidonihah@byui.edu",
+    "favoriteColor": "Orange",
+    "birthday": "07/25/1995"
+}
+
+
+###
+DELETE  http://localhost:3000/contacts/632d24234619d202754fc017 HTTP/1.1
+

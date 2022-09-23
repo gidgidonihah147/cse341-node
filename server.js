@@ -1,10 +1,18 @@
 const express = require('express')
 const mongodb = require('./database/mongodb');
+const bodyParser = require('body-parser');
+
 
 const app = express()
 const port = 3000
 
-app.use('/',require('./routes'))
+app
+  .use(bodyParser.json())
+  .use((req, res, next) => {
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    next();
+  })
+  .use('/', require('./routes'));
 
 //run the initDb function on the mongodb when the server starts so that it can populate the data needed.
 mongodb.initDb((err, mongodb) => {
