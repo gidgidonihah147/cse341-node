@@ -1,5 +1,8 @@
 //pulls in the node mongodb files
-const { MongoClient, ServerApiVersion } = require('mongodb');
+const {
+  MongoClient,
+  ServerApiVersion
+} = require('mongodb');
 //pulls in the .env environment file so we can hide the sensitive information
 require("dotenv").config();
 

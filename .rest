@@ -23,10 +23,11 @@ Content-Type: application/json
 }
 
 ### Local put (updateContact)
-PUT  http://localhost:3000/contacts/632d1c198349a3c236d8df0c HTTP/1.1
+PUT  http://localhost:3000/contacts/632d28b228d0639de43cd7bd HTTP/1.1
+Content-Type: application/json
 
 {
-    "_id": "632d1c198349a3c236d8df0c",
+    "_id": "632d28b228d0639de43cd7bd",
     "firstName": "Tristin",
     "lastName": "Parker",
     "email": "Gidgidonihah@byui.edu",
@@ -36,7 +37,7 @@ PUT  http://localhost:3000/contacts/632d1c198349a3c236d8df0c HTTP/1.1
 
 
 ### Local delete (deleteContact)
-DELETE  http://localhost:3000/contacts/632d2627bf6b8e1d95916bf2 HTTP/1.1
+DELETE  http://localhost:3000/contacts/632d293d05a6694667b7d0f1 HTTP/1.1
 
 
 //Render
@@ -62,11 +63,11 @@ Content-Type: application/json
 }
 
 ### Render PUT (updateContact)
-PUT  https://tparker-cse341.onrender.com/contacts/632d278e236784b89ace6b20/ HTTP/1.1
+PUT  https://tparker-cse341.onrender.com/contacts/632d298f236784b89ace6b21/ HTTP/1.1
 Content-Type: application/json
 
 {
-    "_id": "632d278e236784b89ace6b20",
+    "_id": "632d298f236784b89ace6b21",
     "firstName": "Tristin",
     "lastName": "Parker",
     "email": "TEstINGtheRENDERput@byui.edu",
@@ -76,4 +77,4 @@ Content-Type: application/json
 
 
 ### Render DELETE (deleteContact)
-DELETE  https://tparker-cse341.onrender.com/contacts/632d278e236784b89ace6b20/ HTTP/1.1
+DELETE  https://tparker-cse341.onrender.com/contacts/632d298f236784b89ace6b21/ HTTP/1.1

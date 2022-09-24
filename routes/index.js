@@ -1,8 +1,6 @@
-const routes = require ('express').Router();
+const routes = require('express').Router();
 
-routes.use('/contacts',require('./contacts'))
-routes.use('/',(req, res) => {
-    res.send('Tristin Parker - Base site without a redirect towards contacts.');
-});
+routes.use('/contacts', require('./contacts'))
+routes.use('/', require('./swagger'));
 
-module.exports=routes;
+module.exports = routes;
