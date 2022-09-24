@@ -5,7 +5,7 @@ const doc = {
         title: 'CSE341-NODE',
         description: 'Swagger API Documentation for Contacts assigment for CSE 341 - Tristin Parker'
     },
-    host: 'localhost:3000',
+    host: 'tparker-cse341.onrender.com',
     schemes: ['http']
 };
 
