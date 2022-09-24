@@ -8,7 +8,7 @@
   "host": "tparker-cse341.onrender.com",
   "basePath": "/",
   "schemes": [
-    "http"
+    "https"
   ],
   "paths": {
     "/contacts/": {
