@@ -6,7 +6,7 @@ const doc = {
         description: 'Swagger API Documentation for Contacts assigment for CSE 341 - Tristin Parker'
     },
     host: 'tparker-cse341.onrender.com',
-    schemes: ['http']
+    schemes: ['https']
 };
 
 const outputFile = './swagger.json';
