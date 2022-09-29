@@ -18,7 +18,7 @@ const initDb = (callback) => {
   }
   //Attempts connection to the DB through the .env data
   MongoClient.connect(process.env.MONGODB_URI)
-    //if it connectios without error then goes into effect
+    //if it connects without error then goes into effect
     .then((client) => {
       //applies the database data to _db for easier use
       _db = client;

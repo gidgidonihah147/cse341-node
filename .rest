@@ -4,41 +4,106 @@
 ### Local Home
 GET http://localhost:3000 HTTP/1.1
 
+//Movies
 ### Local getAll
-GET http://localhost:3000/contacts HTTP/1.1
+GET http://localhost:3000/movies HTTP/1.1
 
 ### Local getSingle
-GET http://localhost:3000/contacts/631e51174178157c493561b1 HTTP/1.1
+GET http://localhost:3000/movies/631e51174178157c493561b1 HTTP/1.1
 
-### Local post (addContact)
-POST  http://localhost:3000/contacts/ HTTP/1.1
+### Local post (addMovie)
+POST  http://localhost:3000/movies/ HTTP/1.1
 Content-Type: application/json
 
 {
-    "firstName": "Tristin",
-    "lastName": "Parker",
-    "email": "TESTingTHElocalPOST@byui.edu",
-    "favoriteColor": "Orange",
-    "birthday": "07/25/1995"
+    "title": "The Last Samurai",
+            "year": "2003",
+            "runtime": "154",
+            "genres": [
+                "Action",
+                "Drama",
+                "History"
+            ],
+            "director": "Edward Zwick",
+            "actors": "Ken Watanabe, Tom Cruise, William Atherton, Chad Lindberg",
+            "plot": "An American military advisor embraces the Samurai culture he was hired to destroy after he is captured in battle.",
+            "posterUrl": "http://ia.media-imdb.com/images/M/MV5BMzkyNzQ1Mzc0NV5BMl5BanBnXkFtZTcwODg3MzUzMw@@._V1_SX300.jpg"
 }
 
-### Local put (updateContact)
-PUT  http://localhost:3000/contacts/632d28b228d0639de43cd7bd HTTP/1.1
+### Local put (updateMovie)
+PUT  http://localhost:3000/movies/632d28b228d0639de43cd7bd HTTP/1.1
 Content-Type: application/json
 
 {
     "_id": "632d28b228d0639de43cd7bd",
-    "firstName": "Tristin",
-    "lastName": "Parker",
-    "email": "Gidgidonihah@byui.edu",
-    "favoriteColor": "Orange",
-    "birthday": "07/25/1995"
+    "title": "The Last Samurai",
+            "year": "2003",
+            "runtime": "154",
+            "genres": [
+                "Action",
+                "Drama",
+                "History"
+            ],
+            "director": "Edward Zwick",
+            "actors": "Ken Watanabe, Tom Cruise, William Atherton, Chad Lindberg",
+            "plot": "An American military advisor embraces the Samurai culture he was hired to destroy after he is captured in battle.",
+            "posterUrl": "http://ia.media-imdb.com/images/M/MV5BMzkyNzQ1Mzc0NV5BMl5BanBnXkFtZTcwODg3MzUzMw@@._V1_SX300.jpg"
 }
 
 
 ### Local delete (deleteContact)
-DELETE  http://localhost:3000/contacts/632d293d05a6694667b7d0f1 HTTP/1.1
+DELETE  http://localhost:3000/movies/632d293d05a6694667b7d0f1 HTTP/1.1
 
+//Wishlist
+
+### Local getAll
+GET http://localhost:3000/wishlist HTTP/1.1
+
+### Local getSingle
+GET http://localhost:3000/wishlist/631e51174178157c493561b1 HTTP/1.1
+
+### Local post (addMovie)
+POST  http://localhost:3000/wishlist/ HTTP/1.1
+Content-Type: application/json
+
+{
+    "title": "WALL·E",
+            "year": "2008",
+            "runtime": "98",
+            "genres": [
+                "Animation",
+                "Adventure",
+                "Family"
+            ],
+            "director": "Andrew Stanton",
+            "actors": "Ben Burtt, Elissa Knight, Jeff Garlin, Fred Willard",
+            "plot": "In the distant future, a small waste-collecting robot inadvertently embarks on a space journey that will ultimately decide the fate of mankind.",
+            "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTczOTA3MzY2N15BMl5BanBnXkFtZTcwOTYwNjE2MQ@@._V1_SX300.jpg"
+}
+
+### Local put (updateMovie)
+PUT  http://localhost:3000/wishlist/632d28b228d0639de43cd7bd HTTP/1.1
+Content-Type: application/json
+
+{
+    "_id": "632d28b228d0639de43cd7bd",
+    "title": "The Last Samurai",
+            "year": "2003",
+            "runtime": "154",
+            "genres": [
+                "Action",
+                "Drama",
+                "History"
+            ],
+            "director": "Edward Zwick",
+            "actors": "Ken Watanabe, Tom Cruise, William Atherton, Chad Lindberg",
+            "plot": "An American military advisor embraces the Samurai culture he was hired to destroy after he is captured in battle.",
+            "posterUrl": "http://ia.media-imdb.com/images/M/MV5BMzkyNzQ1Mzc0NV5BMl5BanBnXkFtZTcwODg3MzUzMw@@._V1_SX300.jpg"
+}
+
+
+### Local delete (deleteContact)
+DELETE  http://localhost:3000/movies/632d293d05a6694667b7d0f1 HTTP/1.1
 
 //Render
 ### Render Home

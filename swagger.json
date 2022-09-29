@@ -1,17 +1,17 @@
 {
   "swagger": "2.0",
   "info": {
-    "title": "CSE341-NODE",
-    "description": "Swagger API Documentation for Contacts assigment for CSE 341 - Tristin Parker",
+    "title": "CSE341-Project2",
+    "description": "Swagger API Documentation for project 2 assigment for CSE 341 - Tristin Parker",
     "version": "1.0.0"
   },
-  "host": "tparker-cse341.onrender.com",
+  "host": "localhost:3000",
   "basePath": "/",
   "schemes": [
-    "https"
+    "http"
   ],
   "paths": {
-    "/contacts/": {
+    "/movies/": {
       "get": {
         "description": "",
         "produces": [
@@ -33,19 +33,28 @@
             "schema": {
               "type": "object",
               "properties": {
-                "firstName": {
+                "title": {
                   "example": "any"
                 },
-                "lastName": {
+                "year": {
                   "example": "any"
                 },
-                "email": {
+                "runtime": {
                   "example": "any"
                 },
-                "favoriteColor": {
+                "genre": {
                   "example": "any"
                 },
-                "birthday": {
+                "director": {
+                  "example": "any"
+                },
+                "actors": {
+                  "example": "any"
+                },
+                "plot": {
+                  "example": "any"
+                },
+                "posterUrl": {
                   "example": "any"
                 }
               }
@@ -59,7 +68,7 @@
         }
       }
     },
-    "/contacts/{id}": {
+    "/movies/{id}": {
       "get": {
         "description": "",
         "produces": [
@@ -94,19 +103,177 @@
             "schema": {
               "type": "object",
               "properties": {
-                "firstName": {
+                "title": {
                   "example": "any"
                 },
-                "lastName": {
+                "year": {
                   "example": "any"
                 },
-                "email": {
+                "runtime": {
                   "example": "any"
                 },
-                "favoriteColor": {
+                "genre": {
                   "example": "any"
                 },
-                "birthday": {
+                "director": {
+                  "example": "any"
+                },
+                "actors": {
+                  "example": "any"
+                },
+                "plot": {
+                  "example": "any"
+                },
+                "posterUrl": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+      "delete": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/wishlist/": {
+      "get": {
+        "description": "",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "title": {
+                  "example": "any"
+                },
+                "year": {
+                  "example": "any"
+                },
+                "runtime": {
+                  "example": "any"
+                },
+                "genre": {
+                  "example": "any"
+                },
+                "director": {
+                  "example": "any"
+                },
+                "actors": {
+                  "example": "any"
+                },
+                "plot": {
+                  "example": "any"
+                },
+                "posterUrl": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/wishlist/{id}": {
+      "get": {
+        "description": "",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "title": {
+                  "example": "any"
+                },
+                "year": {
+                  "example": "any"
+                },
+                "runtime": {
+                  "example": "any"
+                },
+                "genre": {
+                  "example": "any"
+                },
+                "director": {
+                  "example": "any"
+                },
+                "actors": {
+                  "example": "any"
+                },
+                "plot": {
+                  "example": "any"
+                },
+                "posterUrl": {
                   "example": "any"
                 }
               }
