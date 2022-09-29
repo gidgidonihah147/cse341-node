@@ -107,10 +107,10 @@ DELETE  http://localhost:3000/movies/632d293d05a6694667b7d0f1 HTTP/1.1
 
 //Render
 ### Render Home
-GET https://tparker-cse341.onrender.com/ HTTP/1.1
+GET https://cse341-project2.onrender.com/ HTTP/1.1
 
 ### Render getAll
-GET https://tparker-cse341.onrender.com/contacts/ HTTP/1.1
+GET https://cse341-project2.onrender.com/movies/ HTTP/1.1
 
 ### Render getSingle
 GET https://tparker-cse341.onrender.com/contacts/631e51174178157c493561b1/ HTTP/1.1

@@ -5,8 +5,8 @@ const doc = {
         title: 'CSE341-Project2',
         description: 'Swagger API Documentation for project 2 assigment for CSE 341 - Tristin Parker'
     },
-    host: 'localhost:3000',
-    schemes: ['http']
+    host: 'cse341-project2.onrender.com',
+    schemes: ['https']
 };
 
 const outputFile = './swagger.json';
