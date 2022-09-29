@@ -11,6 +11,7 @@ const getMovies = async (req, res, next) => {
     res.setHeader('Content-Type', 'application/json');
     res.status(200).json(lists);
   });
+  
 };
 
 const getMovie = async (req, res, next) => {
@@ -22,9 +23,12 @@ const getMovie = async (req, res, next) => {
   });
   //change the results to an array so that its more readable
   result.toArray().then((lists) => {
+
     res.setHeader('Content-Type', 'application/json');
     res.status(200).json(lists[0]);
   });
+  
+
 };
 
 const addMovie = async (req, res) => {
