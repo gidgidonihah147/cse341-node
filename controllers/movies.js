@@ -14,9 +14,9 @@ const getMovies = async (req, res, next) => {
 };
 
 const getMovie = async (req, res, next) => {
-  //Interact with the URL to get the object which in this case would be the ID of the contact
+  //Interact with the URL to get the object which in this case would be the ID of the Movie
   const dbId = new ObjectId(req.params.id);
-  //Pull the results from the table called contacts from the DB called in the mongodb.js file
+  //Pull the results from the table called Movies from the DB called in the mongodb.js file
   const result = await mongodb.getDb().db().collection('ownedMovies').find({
     _id: dbId
   });
@@ -28,7 +28,7 @@ const getMovie = async (req, res, next) => {
 };
 
 const addMovie = async (req, res) => {
-  //creates the variable of contact so that when we post the data to the database it knows what to update where with the help of bodyparser added in the server page
+  //creates the variable of Movie so that when we post the data to the database it knows what to update where with the help of bodyparser added in the server page
   const movie = {
     title: req.body.title,
     year: req.body.year,
@@ -39,7 +39,7 @@ const addMovie = async (req, res) => {
     plot: req.body.plot,
     posterUrl: req.body.posterUrl
   };
-  //adds the contact to the database using the data from the contact variable
+  //adds the Movie to the database using the data from the Movie variable
   const response = await mongodb.getDb().db().collection('ownedMovies').insertOne(movie);
   //If the response back from the database was acknowledged (request successful) then note as much in the console
   if (response.acknowledged) {
@@ -52,9 +52,9 @@ const addMovie = async (req, res) => {
 };
 
 const updateMovie = async (req, res) => {
-  //Interact with the URL to get the object which in this case would be the ID of the contact
+  //Interact with the URL to get the object which in this case would be the ID of the Movie
   const userId = new ObjectId(req.params.id);
-  //creates the variable of contact so that when we post the data to the database it knows what to update where with the help of bodyparser added in the server page
+  //creates the variable of Movie so that when we post the data to the database it knows what to update where with the help of bodyparser added in the server page
   const movie = {
     title: req.body.title,
     year: req.body.year,
@@ -65,10 +65,8 @@ const updateMovie = async (req, res) => {
     plot: req.body.plot,
     posterUrl: req.body.posterUrl
   };
-  //replaces the contact data in the database using the data from the contact variable
-  const response = await mongodb.getDb().db().collection('ownedMovie').replaceOne({
-    _id: userId
-  }, movie);
+  //replaces the Movie data in the database using the data from the Movie variable
+  const response = await mongodb.getDb().db().collection('ownedMovie').replaceOne({_id:userId}, movie);
   //if the response back from the database that there was at least one row deleted, then output a success message to the log and send a status of 204
   if (response.modifiedCount > 0) {
     res.status(204).send();
@@ -82,12 +80,10 @@ const updateMovie = async (req, res) => {
 };
 
 const removeMovie = async (req, res) => {
-  //Interact with the URL to get the object which in this case would be the ID of the contact
+  //Interact with the URL to get the object which in this case would be the ID of the Movie
   const userId = new ObjectId(req.params.id);
-  //creates the variable of contact so that when we post the data to the database it knows what to update where with the help of bodyparser added in the server page
-  const response = await mongodb.getDb().db().collection('ownedMovie').deleteOne({
-    _id: userId
-  }, true);
+  //creates the variable of Movie so that when we post the data to the database it knows what to update where with the help of bodyparser added in the server page
+  const response = await mongodb.getDb().db().collection('ownedMovie').deleteOne({_id:userId}, true);
   //if the response back from the database that there was at least one row deleted, then output a success message to the log and send a status of 204
   if (response.deletedCount > 0) {
     res.status(204).send();
