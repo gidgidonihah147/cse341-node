@@ -2,33 +2,33 @@
 //Localhost
 
 //MOVIES
-### Local getMovies
-GET http://localhost:3000/movies HTTP/1.1
+### Local GET (getMovies) Movies
+    GET http://localhost:3000/movies HTTP/1.1
 
-### Local getMovie
-GET http://localhost:3000/movies/633526347338652a5df9a6b3 HTTP/1.1
+### Local GET (getMovie) Movies
+    GET http://localhost:3000/movies/63365edfa916dc5273eeec7e HTTP/1.1
 
-### Local post (addMovie)
-POST  http://localhost:3000/movies/ HTTP/1.1
-Content-Type: application/json
+### Local post (addMovie) Movies
+    POST  http://localhost:3000/movies/ HTTP/1.1
+    Content-Type: application/json
 
-{
-    "title": "Pacific Rim",
-            "year": "2013",
-            "runtime": "131",
-            "genres": "Action",
+    {
+        "title": "Pacific Rim",
+        "year": "2013",
+        "runtime": "131",
+            "genre": "Action",
             "director": "Guillermo del Toro",
             "actors": "Charlie Hunnam, Diego Klattenhoff, Idris Elba, Rinko Kikuchi",
             "plot": "As a war between humankind and monstrous sea creatures wages on, a former pilot and a trainee are paired up to drive a seemingly obsolete special weapon in a desperate effort to save the world from the apocalypse.",
             "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTY3MTI5NjQ4Nl5BMl5BanBnXkFtZTcwOTU1OTU0OQ@@._V1_SX300.jpg"
-}
+    }
 
-### Local put (updateMovie)
-PUT  http://localhost:3000/movies/633526347338652a5df9a6b3 HTTP/1.1
-Content-Type: application/json
+### Local put (updateMovie) Movies
+    PUT  http://localhost:3000/movies/633526347338652a5df9a6b3 HTTP/1.1
+    Content-Type: application/json
 
-{
-   "_id": "633526347338652a5df9a6b3",
+    {
+    "_id": "633526347338652a5df9a6b3",
     "title": "The Last Samurai",
     "year": "2003",
     "runtime": "154",
@@ -37,100 +37,151 @@ Content-Type: application/json
     "actors": "Ken Watanabe, Tom Cruise, William Atherton, Chad Lindberg",
     "plot": "An American military advisor embraces the Samurai culture he was hired to destroy after he is captured in battle.",
     "posterUrl": "http://ia.media-imdb.com/images/M/MV5BMzkyNzQ1Mzc0NV5BMl5BanBnXkFtZTcwODg3MzUzMw@@._V1_SX300.jpg"
-}
+    }
 
 
-### Local delete (deleteContact)
-DELETE  http://localhost:3000/movies/633533245bb18af10bfb8f66 HTTP/1.1
+### Local delete (deleteContact) Movies
+    DELETE  http://localhost:3000/movies/63365edfa916dc5273eeec7e HTTP/1.1
 
 //Wishlist
 
-### Local getMovies
-GET http://localhost:3000/wishlist HTTP/1.1
+### Local GET (getMovies) Wishlist
+    GET http://localhost:3000/wishlist HTTP/1.1
 
-### Local getMovie
-GET http://localhost:3000/wishlist/63352cc931cf12009472b966 HTTP/1.1
+### Local GET (getMovie) Wishlist
+    GET http://localhost:3000/wishlist/633532b95bb18af10bfb8f65 HTTP/1.1
 
-### Local post (addMovie)
-POST  http://localhost:3000/wishlist/ HTTP/1.1
-Content-Type: application/json
+### Local POST (addMovie) Wishlist
+    POST  http://localhost:3000/wishlist/ HTTP/1.1
+    Content-Type: application/json
 
-{
-    "title": "The Last Samurai",
-            "year": "2003",
-            "runtime": "154",
-            "genre": "Action",
-            "director": "Edward Zwick",
-            "actors": "Ken Watanabe, Tom Cruise, William Atherton, Chad Lindberg",
-            "plot": "An American military advisor embraces the Samurai culture he was hired to destroy after he is captured in battle.",
-            "posterUrl": "http://ia.media-imdb.com/images/M/MV5BMzkyNzQ1Mzc0NV5BMl5BanBnXkFtZTcwODg3MzUzMw@@._V1_SX300.jpg"
-}
+    {
+        "title": "The Last Samurai",
+        "year": "2003",
+        "runtime": "154",
+        "genre": "Action",
+        "director": "Edward Zwick",
+        "actors": "Ken Watanabe, Tom Cruise, William Atherton, Chad Lindberg",
+        "plot": "An American military advisor embraces the Samurai culture he was hired to destroy after he is captured in battle.",
+        "posterUrl": "http://ia.media-imdb.com/images/M/MV5BMzkyNzQ1Mzc0NV5BMl5BanBnXkFtZTcwODg3MzUzMw@@._V1_SX300.jpg"
+    }
 
-### Local put (updateMovie)
-PUT  http://localhost:3000/wishlist/63352c2c31cf12009472b963 HTTP/1.1
-Content-Type: application/json
+### Local PUT (updateMovie) Wishlist
+    PUT  http://localhost:3000/wishlist/6336658c4d1ca7fd7deeaeef HTTP/1.1
+    Content-Type: application/json
 
-{
-    "_id": "63352c2c31cf12009472b963",
-    "title": "The Hitchhiker's Guide to the Galaxy - PUT Test",
-    "year": "2005",
-    "runtime": "109",
-    "genre": [
-      "Adventure",
-      "Comedy",
-      "Sci-Fi"
-    ],
-    "director": "Garth Jennings",
-    "actors": "Bill Bailey, Anna Chancellor, Warwick Davis, Yasiin Bey",
-    "plot": "Mere seconds before the Earth is to be demolished by an alien construction crew, journeyman Arthur Dent is swept off the planet by his friend Ford Prefect, a researcher penning a new edition of \"The Hitchhiker's Guide to the Galaxy.\"",
-    "posterUrl": "http://ia.media-imdb.com/images/M/MV5BMjEwOTk4NjU2MF5BMl5BanBnXkFtZTYwMDA3NzI3._V1_SX300.jpg"
-}
+    {
+        "_id": "6336658c4d1ca7fd7deeaeef",
+        "title": "The Hitchhiker's Guide to the Galaxy - PUT Test",
+        "year": "2005",
+        "runtime": "109",
+        "genre": [
+            "Adventure",
+            "Comedy",
+            "Sci-Fi"
+        ],
+        "director": "Garth Jennings",
+        "actors": "Bill Bailey, Anna Chancellor, Warwick Davis, Yasiin Bey",
+        "plot": "Mere seconds before the Earth is to be demolished by an alien construction crew, journeyman Arthur Dent is swept off the planet by his friend Ford Prefect, a researcher penning a new edition of \"The Hitchhiker's Guide to the Galaxy.\"",
+        "posterUrl": "http://ia.media-imdb.com/images/M/MV5BMjEwOTk4NjU2MF5BMl5BanBnXkFtZTYwMDA3NzI3._V1_SX300.jpg"
+    }  
 
 
-### Local delete (deleteContact)
-DELETE  http://localhost:3000/wishlist/633533525bb18af10bfb8f67 HTTP/1.1
+### Local DELETE (deleteContact) Wishlist  
+    DELETE  http://localhost:3000/wishlist/6336658c4d1ca7fd7deeaeef HTTP/1.1
+
+
 
 //Render
+
 ### Render Home
-GET https://cse341-project2.onrender.com/ HTTP/1.1
-
-### Local getMovies
-GET https://cse341-project2.onrender.com/movies/ HTTP/1.1
-
-### Local getMovie
-GET https://cse341-project2.onrender.com/movies/63352cc931cf12009472b966 HTTP/1.1
-
-### Local post (addMovie)
-POST  https://cse341-project2.onrender.com/movies/ HTTP/1.1
-Content-Type: application/json
-
-{
-    "title": "The Last Samurai",
-            "year": "2003",
-            "runtime": "154",
-            "genre": "Action",
-            "director": "Edward Zwick",
-            "actors": "Ken Watanabe, Tom Cruise, William Atherton, Chad Lindberg",
-            "plot": "An American military advisor embraces the Samurai culture he was hired to destroy after he is captured in battle.",
-            "posterUrl": "http://ia.media-imdb.com/images/M/MV5BMzkyNzQ1Mzc0NV5BMl5BanBnXkFtZTcwODg3MzUzMw@@._V1_SX300.jpg"
-}
-
-### Local put (updateMovie)
-PUT  https://cse341-project2.onrender.com//63352cc931cf12009472b966 HTTP/1.1
-Content-Type: application/json
-
-{
-    "_id": "633526a07338652a5df9a6b5",
-    "title": "The Last Samurai",
-            "year": "2003",
-            "runtime": "154",
-            "genre": "Action",
-            "director": "Edward Zwick",
-            "actors": "Ken Watanabe, Tom Cruise, William Atherton, Chad Lindberg",
-            "plot": "An American military advisor embraces the Samurai culture he was hired to destroy after he is captured in battle.",
-            "posterUrl": "http://ia.media-imdb.com/images/M/MV5BMzkyNzQ1Mzc0NV5BMl5BanBnXkFtZTcwODg3MzUzMw@@._V1_SX300.jpg"
-}
+    GET https://cse341-project2.onrender.com/ HTTP/1.1
 
 
-### Local delete (deleteContact)
-DELETE  https://cse341-project2.onrender.com/movies/633533245bb18af10bfb8f66 HTTP/1.1
+//Movies
+
+### Render GET (getMovies) Movies
+    GET https://cse341-project2.onrender.com/movies/ HTTP/1.1
+
+### Render GET (getMovie) Movies
+    GET https://cse341-project2.onrender.com/movies/63352cc931cf12009472b966 HTTP/1.1
+
+### Render POST (addMovie) Movies
+    POST  https://cse341-project2.onrender.com/movies/ HTTP/1.1
+    Content-Type: application/json
+
+    {
+        "title": "The Last Samurai",
+        "year": "2003",
+        "runtime": "154",
+        "genre": "Action",
+        "director": "Edward Zwick",
+        "actors": "Ken Watanabe, Tom Cruise, William Atherton, Chad Lindberg",
+        "plot": "An American military advisor embraces the Samurai culture he was hired to destroy after he is captured in battle.",
+        "posterUrl": "http://ia.media-imdb.com/images/M/MV5BMzkyNzQ1Mzc0NV5BMl5BanBnXkFtZTcwODg3MzUzMw@@._V1_SX300.jpg"
+    }
+
+### Render PUT (updateMovie) Movies 
+    PUT  https://cse341-project2.onrender.com/movies/63352cc931cf12009472b966 HTTP/1.1
+    Content-Type: application/json
+
+    {
+        "_id": "633526a07338652a5df9a6b5",
+        "title": "The Last Samurai",
+        "year": "2003",
+        "runtime": "154",
+        "genre": "Action",
+        "director": "Edward Zwick",
+        "actors": "Ken Watanabe, Tom Cruise, William Atherton, Chad Lindberg",
+        "plot": "An American military advisor embraces the Samurai culture he was hired to destroy after he is captured in battle.",
+        "posterUrl": "http://ia.media-imdb.com/images/M/MV5BMzkyNzQ1Mzc0NV5BMl5BanBnXkFtZTcwODg3MzUzMw@@._V1_SX300.jpg"
+    }
+
+
+### Render delete (deleteContact) Movies
+    DELETE  https://cse341-project2.onrender.com/movies/633533245bb18af10bfb8f66 HTTP/1.1
+
+
+
+//Wishlist
+
+### Render GET (getMovies) Wishlist
+    GET https://cse341-project2.onrender.com/wishlist/ HTTP/1.1
+
+### Render GET (getMovie) Wishlist
+    GET https://cse341-project2.onrender.com/wishlist/63352cc931cf12009472b966 HTTP/1.1
+
+### Render POST (addMovie) Wishlist
+    POST  https://cse341-project2.onrender.com/wishlist/ HTTP/1.1
+    Content-Type: application/json
+
+    {
+        "title": "The Last Samurai",
+        "year": "2003",
+        "runtime": "154",
+        "genre": "Action",
+        "director": "Edward Zwick",
+        "actors": "Ken Watanabe, Tom Cruise, William Atherton, Chad Lindberg",
+        "plot": "An American military advisor embraces the Samurai culture he was hired to destroy after he is captured in battle.",
+        "posterUrl": "http://ia.media-imdb.com/images/M/MV5BMzkyNzQ1Mzc0NV5BMl5BanBnXkFtZTcwODg3MzUzMw@@._V1_SX300.jpg"
+    }
+
+### Render PUT (updateMovie) Wishlist 
+    PUT  https://cse341-project2.onrender.com/wishlist/63352cc931cf12009472b966 HTTP/1.1
+    Content-Type: application/json
+
+    {
+        "_id": "633526a07338652a5df9a6b5",
+        "title": "The Last Samurai",
+        "year": "2003",
+        "runtime": "154",
+        "genre": "Action",
+        "director": "Edward Zwick",
+        "actors": "Ken Watanabe, Tom Cruise, William Atherton, Chad Lindberg",
+        "plot": "An American military advisor embraces the Samurai culture he was hired to destroy after he is captured in battle.",
+        "posterUrl": "http://ia.media-imdb.com/images/M/MV5BMzkyNzQ1Mzc0NV5BMl5BanBnXkFtZTcwODg3MzUzMw@@._V1_SX300.jpg"
+    }
+
+
+### Render delete (deleteContact) Wishlist
+    DELETE  https://cse341-project2.onrender.com/wishlist/633533245bb18af10bfb8f66 HTTP/1.1
