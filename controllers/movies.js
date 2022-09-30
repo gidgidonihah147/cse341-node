@@ -19,7 +19,7 @@ const getMovies = async (req, res, next) => {
 
 const getMovie = async (req, res, next) => {
   if (!ObjectId.isValid(req.params.id)) {
-    res.status(400).json('Must use a valid contact id to find a contact.');
+    res.status(400).json('Must use a valid id to find a movie.');
   } else {
     //Interact with the URL to get the object which in this case would be the ID of the Movie
     const dbId = new ObjectId(req.params.id);
@@ -66,9 +66,9 @@ const addMovie = async (req, res) => {
 
 
 const updateMovie = async (req, res) => {
-  //Interact with the URL to get the object which in this case would be the ID of the contact
+  //Interact with the URL to get the object which in this case would be the ID of the movie
   const userId = new ObjectId(req.params.id);
-  //creates the variable of contact so that when we post the data to the database it knows what to update where with the help of bodyparser added in the server page
+  //creates the variable of movie so that when we post the data to the database it knows what to update where with the help of bodyparser added in the server page
   const movie = {
     title: req.body.title,
     year: req.body.year,
@@ -80,7 +80,7 @@ const updateMovie = async (req, res) => {
     posterUrl: req.body.posterUrl
   };
   if (req.body.title != null & req.body.year != null & req.body.runtime != null & req.body.genre != null & req.body.director != null & req.body.actors != null & req.body.plot != null & req.body.posterUrl != null) {
-    //replaces the contact data in the database using the data from the contact variable
+    //replaces the movie data in the database using the data from the movie variable
     const response = await mongodb.getDb().db().collection('ownedMovies').replaceOne({
       _id: userId
     }, movie);
@@ -102,11 +102,11 @@ const updateMovie = async (req, res) => {
 
 const removeMovie = async (req, res) => {
   if (!ObjectId.isValid(req.params.id)) {
-    res.status(400).json('Must use a valid contact id to find a contact.');
+    res.status(400).json('Must use a valid movie id to find a movie.');
   } else {
-    //Interact with the URL to get the object which in this case would be the ID of the contact
+    //Interact with the URL to get the object which in this case would be the ID of the movie
     const userId = new ObjectId(req.params.id);
-    //creates the variable of contact so that when we post the data to the database it knows what to update where with the help of bodyparser added in the server page
+    //creates the variable of movie so that when we post the data to the database it knows what to update where with the help of bodyparser added in the server page
     const response = await mongodb.getDb().db().collection('ownedMovies').deleteOne({
       _id: userId
     }, true);
